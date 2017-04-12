@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>打灰机</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	body{background:#FFFFE0}
+	#loveHeart{float:left;width:670px;height:625px}
+	#garden{width:100%;height:100%}
+	#elapseClock{text-align:right;font-size:18px;margin-top:10px;margin-bottom:10px}
+	#words{font-family:"sans-serif";width:500px;font-size:24px;color:#666}
+	#messages{display:none;padding-left: 120px;}
+	#elapseClock .digit{font-family:"digit";font-size:36px}
+	#loveu{padding:5px;font-size:22px;margin-top:50px;margin-right:120px;text-align:right;display:none}
+	#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
+</style>
+	<link rel="stylesheet" type="text/css" href="打灰机.css">
+	<script type="text/javascript" src="jQuery.js"></script>
+	<script type="text/javascript" src="2.js"></script>
+	<script type="text/javascript" src="123.js"></script>
+	<script type="text/javascript" src="1.js"></script>
+</head>
+<body>
+<div id="contentdiv">
+	<!-- 开始盒子 -->
+	<div id="startdiv">
+		<div id="sisi">
+			<img src="image/思思.jpg">
+		</div>
+		<!-- 开始按钮 -->
+		<button onclick="begin()">皮皮思我们走</button>
+	</div>
+	<!-- 游戏界面盒子 --> 
+	<div id="maindiv">
+		<!-- 分数盒子 -->
+		<div id="scorediv">
+			<label>分数：</label>
+			<label id="label">0</label>
+		</div>
+	<!-- 暂停盒子 -->
+	<div id="stopdiv">
+		<input type="button" name="continue" value="继续" id="continue"><br>
+		<input type="button" name="restart" value="重新开始" id="restart" ><br>
+		<input type="button" name="return" value="回到主页" id="return">
+	</div>
+	<!-- 结束盒子 -->
+	<div id="enddiv">
+		<p id="txt">飞机大战总分数</p>
+		<p id="planescore">0</p>
+		<div><input type="button" name="" value="重新开始" onclick="restart()"></div>
+	</div>
+	</div>
+</div>
+<div id="loveHeart">
+		<canvas id="garden"></canvas>
+		<div id="words">
+				<div id="messages">
+					皮皮思要开开心心哦。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<div class="signature">- <span style="font-family:黑体">帅气的鸡腿</span></div>
+				</div>
+			</div>
+</div>
+		<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 100);
+
+</script>
+<script src="打灰机.js"></script>
+</body>
+</html>
